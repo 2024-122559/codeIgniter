@@ -34,7 +34,7 @@
                             aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="<?= base_url("autores/agregar") ?>" method="post">
+                        <form action="<?= base_url('autores/agregar') ?>" method="post">
                             <div class="mb-3">
                                 <label for="txt_id" class="form-label">Código Autor</label>
                                 <input type="number" name="txt_id" id="txt_id" class="form-control" required>
