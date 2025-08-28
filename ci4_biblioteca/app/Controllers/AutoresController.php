@@ -20,9 +20,9 @@ class AutoresController extends BaseController
             'nombre'       => $this->request->getPost('txt_nombre'),
             'nacionalidad' => $this->request->getPost('txt_nac'),
         ];
-  print_r($datos);
-        //$autor->insert($datos); 
-       // return redirect()->to(base_url('autores')); 
+
+        $autor->insert($datos); 
+        return redirect()->to(base_url('autores')); 
     }
 
     public function eliminarAutor($id)
@@ -31,4 +31,26 @@ class AutoresController extends BaseController
         $autor->delete($id);
         return redirect()->to(base_url('autores'));
     }
+
+     public function buscarAutor($id)
+    {
+        $autor = new AutoresModel();
+        $datos['autor'] = $autor->find($id);
+        return view('editar_autor', $datos);
+    }
+
+      public function actualizarAutor($id)
+    {
+        $autor = new AutoresModel();
+        $datos = [
+            
+            'apellido'     => $this->request->getPost('txt_ape'),
+            'nombre'       => $this->request->getPost('txt_nombre'),
+            'nacionalidad' => $this->request->getPost('txt_nac'),
+        ];
+
+        $autor->update($id, $datos);
+        return redirect()->to(base_url('autores'));
+    }
 }
+
