@@ -15,3 +15,9 @@ $routes->post('autores/actualizar/(:num)', 'AutoresController::actualizarAutor/$
 
 
 $routes->post('login','EmpleadosCotroller::index');
+
+$routes->get('tipo_usuario','TiposController::vistaTipos');
+$routes->post('tipos/agregar','TiposController::agregarTipos');
+$routes->get('tipos/eliminar/(:num)','tiposController::eliminarTipos/$1');
+$routes->get('tipos/editar/(:num)','TiposController::buscarTipos/$1');
+$routes->post('tipos/actualizar/(:num)', 'TiposController::actualizarTipos/$1');
