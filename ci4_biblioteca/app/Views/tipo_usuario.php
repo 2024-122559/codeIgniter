@@ -44,7 +44,8 @@
                                 <td class="text-center p-2 p-md-3 ">
                                     <div class="d-flex justify-content-center gap-2">
                                         <!-- Enlace para Editar -->
-                                        <a href="<?=base_url('tipos/editar/'.$tipo['tipo_usuario_id']);?>" class="link-primary text-decoration-none fw-semibold">
+                                        <a href="<?=base_url('tipos/editar/'.$tipo['tipo_usuario_id']);?>"
+                                            class="link-primary text-decoration-none fw-semibold">
                                             <i class="bi bi-pencil-fill"></i>
                                         </a>
                                         <!-- Enlace para Eliminar -->

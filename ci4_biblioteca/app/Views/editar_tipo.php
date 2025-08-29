@@ -36,7 +36,9 @@
                             <div class="mb-3">
                                 <label for="txt_des" class="form-label fw-semibold">Descripcion</label>
                                 <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-flag"></i></span>
+                                    <span class="input-group-text">
+                                        <i class="bi bi-chat-square-text"></i>
+                                    </span>
                                     <input type="text" name="txt_des" id="txt_des" class="form-control"
                                         value="<?= $tipo['descripcion'] ?>" required>
                                 </div>
@@ -49,7 +51,8 @@
                                     <a href="javascript:history.back()" class="btn btn-secondary w-50 w-md-auto">
                                         <i class="bi bi-arrow-left-circle me-2"></i>Regresar
                                     </a>
-                                    <a href="<?= base_url('tipo_usuario') ?>" class="btn btn-outline-danger w-50 w-md-auto">
+                                    <a href="<?= base_url('tipo_usuario') ?>"
+                                        class="btn btn-outline-danger w-50 w-md-auto">
                                         <i class="bi bi-x-circle-fill me-2"></i>Cancelar
                                     </a>
                                 </div>
@@ -62,7 +65,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
