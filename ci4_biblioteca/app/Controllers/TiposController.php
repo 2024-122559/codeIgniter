@@ -42,7 +42,6 @@ class TiposController extends BaseController
     {
         $tipo = new TiposModel();
         $datos = [
-            'tipo_usuario_id'=> $this->request->getPost('txt_id'),
             'nombre_tipo' => $this->request->getPost('txt_nombre'),
             'descripcion' => $this->request->getPost('txt_des'),
         ];
