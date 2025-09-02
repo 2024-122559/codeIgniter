@@ -4,6 +4,7 @@ use App\Models\AutoresModel;
 
 class AutoresController extends BaseController
 {
+    
     public function vistaAutores(): string
     {
         $autor = new AutoresModel();
