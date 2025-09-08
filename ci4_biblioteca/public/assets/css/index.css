@@ -1,0 +1,81 @@
+body {
+    background: #f0f4f8;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    color: #1f2937;
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+/*  Encabezado */
+h1.fw-bold {
+    font-size: 3rem;
+    text-align: center;
+    color: #0d6efd;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+p.text-muted {
+    font-size: 1.15rem;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/*Contenedor de tarjetas */
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 2rem; 
+}
+
+/* Tarjetas */
+.card {
+    flex: 0 1 250px; 
+    border-radius: 1.2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/*iconos de las tarjetas*/
+.card i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.card:hover i {
+    transform: scale(1.2) rotate(15deg);
+}
+
+/* Títulos  */
+.card h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+/* Colores por sección  */
+.text-primary { color: #0d6efd !important; }
+.text-success { color: #198754 !important; }
+.text-warning { color: #ffc107 !important; }
+.text-danger { color: #dc3545 !important; }
+.text-info { color: #0dcaf0 !important; }
+.text-secondary { color: #6c757d !important; }
+
+

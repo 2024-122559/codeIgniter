@@ -7,6 +7,8 @@
     <title>Editar Autor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="bg-light">
@@ -18,7 +20,7 @@
                         <h4 class="mb-0"><i class="bi bi-pencil-square me-2"></i>Editar Autor</h4>
                     </div>
                     <div class="card-body p-4">
-                        <form action="<?= base_url('autores/actualizar/' . $autor['codigo_autor']) ?>" method="post"
+                        <form id="formEditarAutor" action="<?= base_url('autores/actualizar/' . $autor['codigo_autor']) ?>" method="post"
                             class="needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="txt_id" class="form-label fw-semibold">Código Autor</label>
@@ -73,7 +75,24 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // SweetAlert para guardar cambios
+        const formEditar = document.getElementById('formEditarAutor');
+        formEditar.addEventListener('submit', function(e) {
+            e.preventDefault(); // evita el envío inmediato
+
+            Swal.fire({
+                title: 'Cambios guardados',
+                text: 'Los datos del autor se han actualizado correctamente.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            }).then(() => {
+                formEditar.submit(); // envía el formulario después de cerrar alerta
+            });
+        });
+    </script>
 </body>
 
 </html>
