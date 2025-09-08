@@ -17,7 +17,10 @@
             </div>
             <div class="card-body p-3 p-md-4">
                 <!-- Botón para abrir el modal -->
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <a href="<?=base_url('index')?>" class="btn btn-outline-secondary btn-lg px-3 px-md-4 shadow-sm">
+                        <i class="bi bi-arrow-left me-2"></i>Regresar
+                    </a>
                     <button type="button" class="btn btn-warning btn-lg px-3 px-md-4 shadow-sm" data-bs-toggle="modal"
                         data-bs-target="#modalAgregar">
                         <i class="bi bi-plus-circle-fill me-2"></i>Nuevo Autor

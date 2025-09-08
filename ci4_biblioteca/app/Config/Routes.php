@@ -14,7 +14,7 @@ $routes->get('autores/editar/(:num)', 'AutoresController::buscarAutor/$1');
 $routes->post('autores/actualizar/(:num)', 'AutoresController::actualizarAutor/$1');
 
 
-$routes->post('login','EmpleadosCotroller::index');
+$routes->post('index','EmpleadosCotroller::index');
 
 $routes->get('tipo_usuario','TiposController::vistaTipos');
 $routes->post('tipos/agregar','TiposController::agregarTipos');
